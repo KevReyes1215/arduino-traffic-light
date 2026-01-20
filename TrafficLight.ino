@@ -32,7 +32,7 @@ void loop() {
 // function bellow //
 void greenLightDelay() {  // works
 
-  while (millis() - lastTime <= 10000) { // millis goes up no delay subtract the lastTime (<1000) (had help with AI)
+  while (millis() - lastTime <= 10000) { // millis goes up no delay subtract the lastTime (<1000)
     if (digitalRead(8) == HIGH) { // checks if button is pressed with no delay from while loop
     Serial.println("User has pressed button!");
     break;
@@ -52,7 +52,7 @@ void trafficLightCycle() {  // works
   digitalWrite(white, LOW);
   digitalWrite(redP, HIGH);
 
-  lastTime = millis(); // records last time before entering while loop (had help with AI)
+  lastTime = millis(); // records last time before entering while loop 
   greenLightDelay();  //checks if pedestrian button is pressed
 
   Serial.println("🟡");
